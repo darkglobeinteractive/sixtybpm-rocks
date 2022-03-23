@@ -8,9 +8,21 @@ body {
   font-size: 18px;
   font-family: 'Rubik', Arial, sans-serif;
   line-height: 1.5em;
+  text-align: center;
 }
-h1, h2 {
+h1, h2, h3 {
+  margin: 0 0 10px;
   font-weight: 600;
+}
+h1 {
+  margin-bottom: 10px;
+  font-size: 32px;
+}
+h2 {
+  font-size: 28px;
+}
+h3 {
+  font-size: 22px;
 }
 #root,
 #root * {
@@ -22,9 +34,14 @@ h1, h2 {
 #page {
   max-width: 1000px;
   margin: 0 auto;
+}
+.section {
   padding: 20px;
   background-color: rgba(255,255,255,0.8);
   border-radius: 20px;
+}
+.section + .section {
+  margin-top: 20px;
 }
 .wrap > *:first-child {
   margin-top: 0;
@@ -34,19 +51,16 @@ h1, h2 {
 }
 
 /* HEADER ------------------------------------------------------- */
-#header {
-  text-align: center;
-}
+#header { }
 #header h1 { }
 
-/* FOOTER ------------------------------------------------------- */
+/* FORM --------------------------------------------------------- */
 #form-container {
   max-width: 600px;
   padding: 20px;
-  margin: 30px auto;
+  margin: 20px auto 0;
   background-color: rgba(255,255,255,0.75);
   border-radius: 20px;
-  text-align: center;
 }
 #form { }
 #form .field-set { }
@@ -65,27 +79,34 @@ h1, h2 {
   display: inline-block;
   margin: 0;
   padding: 0.5em 1em;
-  border: 1px solid #333;
+  border: none;
+  border-radius: 15px;
   outline: none;
-  background: rgba(255,255,255,1);
+  background: rgba(0,0,0,0.25);
   color: #333;
   font-size: 18px;
   font-weight: 600;
   line-height: 1em;
-  text-align: center;
   text-decoration: none;
   text-transform: uppercase;
   cursor: pointer;
   -webkit-appearance: none;
   -moz-appearance: none;
+  transition: background 200ms ease-in-out, color 200ms ease-in-out;
+}
+#form .field-set input[type="submit"]:hover {
+  background: rgba(0,0,0,0.75);
+  color: #ccc;
+  transition: background 300ms ease-in-out, color 300ms ease-in-out;
 }
 #form .field-set .notes { }
 
 /* STONE CONTAINER ---------------------------------------------- */
 .stone-container { }
-.stone-container h2 {
-  text-align: center;
+.section.stone-container {
+  padding-bottom: 0;
 }
+.stone-container h2 { }
 .stone-grid {
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -93,11 +114,13 @@ h1, h2 {
   -ms-flex-flow: row wrap;
   -webkit-flex-flow: row wrap;
   flex-flow: row wrap;
+  justify-content: center;
   position: relative;
   margin: 0 -10px;
 }
 .stone-grid .stone {
   width: 33.3%;
+  margin: 0 0 20px;
   padding: 0 10px;
 }
 .stone-grid .stone .wrap { }
@@ -105,10 +128,63 @@ h1, h2 {
 .stone-grid .stone .image img {
   display: block;
   width: 100%;
+  margin: 0 0 10px;
+  border-radius: 20px;
 }
+.stone-grid .stone .info {
+  padding: 0 10px;
+}
+.stone-grid .stone .title {
+  margin-bottom: 0;
+}
+.stone-grid .stone .location { }
 
 /* FOOTER ------------------------------------------------------- */
 #footer {
+  padding: 10px 20px 20px;
+  color: #ccc;
   font-size: 14px;
-  text-align: center;
+}
+
+@media screen and (max-width: 750px) {
+
+  /* STONE CONTAINER ---------------------------------------------- */
+  .stone-grid .stone {
+    width: 50%;
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+
+  /* GLOBAL ------------------------------------------------------- */
+  body {
+    font-size: 16px;
+  }
+  h1 {
+    font-size: 28px;
+  }
+  h2 {
+    font-size: 24px;
+  }
+  h3 {
+    font-size: 18px;
+  }
+
+}
+
+@media screen and (max-width: 450px) {
+
+  /* STONE CONTAINER ---------------------------------------------- */
+  .stone-grid {
+    -ms-flex-flow: column wrap;
+    -webkit-flex-flow: column wrap;
+    flex-flow: column wrap;
+    margin: 0;
+  }
+  .stone-grid .stone {
+    width: 100%;
+    padding: 0;
+  }
+
 }
