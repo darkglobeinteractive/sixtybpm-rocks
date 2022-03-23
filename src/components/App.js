@@ -79,7 +79,7 @@ class App extends Component {
         </div>
         <div id="form-container">
           <div className="wrap">
-            <form id="form" action="http://sixtybpm-local:8888/roaming-stones/" method="post">
+            <form id="form" action="https://60bpm.com/roaming-stones/" method="post">
               <div className="field-set">
                 <label htmlFor="rocks-check">Enter the code found on the back of your stone below:</label>
                 <input type="text" id="rocks-check" name="rocks_check" />
