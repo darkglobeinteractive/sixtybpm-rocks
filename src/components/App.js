@@ -25,7 +25,7 @@ class App extends Component {
         orderby: 'title',
         order: 'asc',
         per_page: 100,
-        collection: 118,
+        collection: 119,
         _fields: 'acf.roaming_stone_location,title,id,gallery_image'
       }
     }).then((res) => {
