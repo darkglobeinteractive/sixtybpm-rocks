@@ -1,0 +1,65 @@
+/* STONE CONTAINER ---------------------------------------------- */
+.stone-container { }
+.section.stone-container {
+  padding-bottom: 0;
+}
+.stone-container h2 { }
+
+.stone-grid {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-flow: row wrap;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  justify-content: center;
+  position: relative;
+  margin: 0 -10px;
+}
+.stone-grid .stone {
+  width: 33.3%;
+  margin: 0 0 20px;
+  padding: 0 10px;
+}
+.stone-grid .stone .wrap { }
+.stone-grid .stone .image { }
+.stone-grid .stone .image img {
+  display: block;
+  width: 100%;
+  margin: 0 0 10px;
+  border-radius: 20px;
+}
+.stone-grid .stone .info {
+  padding: 0 10px;
+}
+.stone-grid .stone .title {
+  margin-bottom: 0;
+}
+.stone-grid .stone .location { }
+
+
+@media screen and (max-width: 750px) {
+
+  /* STONE CONTAINER ---------------------------------------------- */
+  .stone-grid .stone {
+    width: 50%;
+  }
+
+}
+
+
+@media screen and (max-width: 450px) {
+
+  /* STONE CONTAINER ---------------------------------------------- */
+  .stone-grid {
+    -ms-flex-flow: column wrap;
+    -webkit-flex-flow: column wrap;
+    flex-flow: column wrap;
+    margin: 0;
+  }
+  .stone-grid .stone {
+    width: 100%;
+    padding: 0;
+  }
+
+}

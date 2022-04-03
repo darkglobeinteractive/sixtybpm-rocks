@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import './App.css';
 import SixtyBPM from '../apis/sixtybpm';
+
+import '../css/App.css';
 import Header from './Header';
 import Form from './Form';
 import Stones from './Stones';
-import StonesLoading from './StonesLoading';
 import Footer from './Footer';
 
 class App extends Component {
@@ -49,18 +49,6 @@ class App extends Component {
 
   }
 
-  // Render the loading component until the stones state object has been populated
-  renderStones() {
-    if (this.state.stones.length === 0) {
-      return (
-        <StonesLoading />
-      );
-    }
-    return (
-      <Stones stones={this.state.stones} />
-    );
-  }
-
   render() {
     return (
       <div id="page">
@@ -68,7 +56,7 @@ class App extends Component {
           <Header />
           <Form />
         </div>
-        {this.renderStones()}
+        <Stones stones={this.state.stones} />
         <Footer />
       </div>
     );

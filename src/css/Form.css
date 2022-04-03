@@ -1,0 +1,46 @@
+/* FORM --------------------------------------------------------- */
+#form-container {
+  max-width: 600px;
+  padding: 20px;
+  margin: 20px auto 0;
+  background-color: rgba(255,255,255,0.75);
+  border-radius: 20px;
+}
+#form { }
+#form .field-set { }
+#form .field-set + .field-set {
+  margin-top: 10px;
+}
+#form .field-set label { }
+#form .field-set input[type="text"] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #333;
+  text-align: center;
+}
+#form .field-set input[type="submit"] {
+  display: inline-block;
+  margin: 0;
+  padding: 0.5em 1em;
+  border: none;
+  border-radius: 15px;
+  outline: none;
+  background: rgba(0,0,0,0.25);
+  color: #333;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1em;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  transition: background 200ms ease-in-out, color 200ms ease-in-out;
+}
+#form .field-set input[type="submit"]:hover {
+  background: rgba(0,0,0,0.75);
+  color: #ccc;
+  transition: background 300ms ease-in-out, color 300ms ease-in-out;
+}
+#form .field-set .notes { }

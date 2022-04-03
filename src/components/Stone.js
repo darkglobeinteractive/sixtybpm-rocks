@@ -8,8 +8,8 @@ const Stone = ({ stone }) => {
           <img src={stone.image_url} />
         </div>
         <div className="info">
-          <h3 className="title">{stone.title}</h3>
-          <div className="location">{stone.location}</div>
+          <h3 className="title" dangerouslySetInnerHTML={{__html: stone.title}} />
+          <div className="location" dangerouslySetInnerHTML={{__html: stone.location}} />
         </div>
       </div>
     </div>

@@ -54,105 +54,11 @@ h3 {
 #header { }
 #header h1 { }
 
-/* FORM --------------------------------------------------------- */
-#form-container {
-  max-width: 600px;
-  padding: 20px;
-  margin: 20px auto 0;
-  background-color: rgba(255,255,255,0.75);
-  border-radius: 20px;
-}
-#form { }
-#form .field-set { }
-#form .field-set + .field-set {
-  margin-top: 10px;
-}
-#form .field-set label { }
-#form .field-set input[type="text"] {
-  display: block;
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #333;
-  text-align: center;
-}
-#form .field-set input[type="submit"] {
-  display: inline-block;
-  margin: 0;
-  padding: 0.5em 1em;
-  border: none;
-  border-radius: 15px;
-  outline: none;
-  background: rgba(0,0,0,0.25);
-  color: #333;
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 1em;
-  text-decoration: none;
-  text-transform: uppercase;
-  cursor: pointer;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  transition: background 200ms ease-in-out, color 200ms ease-in-out;
-}
-#form .field-set input[type="submit"]:hover {
-  background: rgba(0,0,0,0.75);
-  color: #ccc;
-  transition: background 300ms ease-in-out, color 300ms ease-in-out;
-}
-#form .field-set .notes { }
-
-/* STONE CONTAINER ---------------------------------------------- */
-.stone-container { }
-.section.stone-container {
-  padding-bottom: 0;
-}
-.stone-container h2 { }
-.stone-grid {
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -ms-flex-flow: row wrap;
-  -webkit-flex-flow: row wrap;
-  flex-flow: row wrap;
-  justify-content: center;
-  position: relative;
-  margin: 0 -10px;
-}
-.stone-grid .stone {
-  width: 33.3%;
-  margin: 0 0 20px;
-  padding: 0 10px;
-}
-.stone-grid .stone .wrap { }
-.stone-grid .stone .image { }
-.stone-grid .stone .image img {
-  display: block;
-  width: 100%;
-  margin: 0 0 10px;
-  border-radius: 20px;
-}
-.stone-grid .stone .info {
-  padding: 0 10px;
-}
-.stone-grid .stone .title {
-  margin-bottom: 0;
-}
-.stone-grid .stone .location { }
-
 /* FOOTER ------------------------------------------------------- */
 #footer {
   padding: 10px 20px 20px;
   color: #ccc;
   font-size: 14px;
-}
-
-@media screen and (max-width: 750px) {
-
-  /* STONE CONTAINER ---------------------------------------------- */
-  .stone-grid .stone {
-    width: 50%;
-  }
-
 }
 
 @media screen and (max-width: 600px) {
@@ -169,22 +75,6 @@ h3 {
   }
   h3 {
     font-size: 18px;
-  }
-
-}
-
-@media screen and (max-width: 450px) {
-
-  /* STONE CONTAINER ---------------------------------------------- */
-  .stone-grid {
-    -ms-flex-flow: column wrap;
-    -webkit-flex-flow: column wrap;
-    flex-flow: column wrap;
-    margin: 0;
-  }
-  .stone-grid .stone {
-    width: 100%;
-    padding: 0;
   }
 
 }
