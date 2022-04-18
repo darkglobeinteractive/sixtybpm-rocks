@@ -22,7 +22,7 @@ class Stones extends React.Component {
     } else {
       return (
         <div>
-          <p>The following stones have been distributed and are either waiting to be discovered or in someone's possession.</p>
+          <p>Roaming stones are decorated stones--each containing the URL of this site and a unique code--that have been distributed around the world for people to discover and then (hopefully) hide again for someone else to find. If you've found one of our stones, please submit the code above to learn about its travels and tell us about your discovery. Below is a gallery of the roaming stones that are currently in circulation.</p>
           <div className="stone-grid">
             {this.renderStonesGrid(stones)}
           </div>
@@ -36,7 +36,7 @@ class Stones extends React.Component {
     return (
       <div className="section stone-container">
         <div className="wrap">
-          <h2>Currently Circulating Stones</h2>
+          <h2>About the Roaming Stones</h2>
           {this.renderStones(this.props.stones)}
         </div>
       </div>
