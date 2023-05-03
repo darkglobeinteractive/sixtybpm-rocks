@@ -16,7 +16,7 @@ const Form = () => {
             <input type="text" id="rocks-check" name="rocks_check" value={code} placeholder="Enter Code Here" onChange={(e) => setCode(e.target.value.toUpperCase())} />
           </div>
           <div className="field-set">
-            <input type="submit" value="Submit" />
+            <input id="submit-roaming-stone-code" type="submit" value="Submit" />
           </div>
         </form>
       </div>
