@@ -26,7 +26,7 @@ class App extends Component {
         order: 'asc',
         per_page: 100,
         collection: 119,
-        _fields: 'acf.roaming_stone_location,title,id,gallery_image'
+        _fields: 'acf.roaming_stone_location,acf.roaming_stone_name,title,id,gallery_image'
       }
     }).then((res) => {
 
@@ -34,7 +34,7 @@ class App extends Component {
       const stones = res.data.map(stone => {
         return {
           id: stone.id,
-          title: stone.title.rendered,
+          title: stone.acf.roaming_stone_name,
           location: stone.acf.roaming_stone_location,
           image_url: stone.gallery_image
         }
