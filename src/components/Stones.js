@@ -9,9 +9,11 @@ class Stones extends React.Component {
   // Render the stones grid
   renderStonesGrid(stones) {
     return stones.map((stone, index) => {
-      return (
-        <Stone key={index} stone={stone} />
-      );
+      if (stone.location != 'TBD') {
+        return (
+          <Stone key={index} stone={stone} />
+        );
+      }
     });
   }
 
