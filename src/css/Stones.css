@@ -4,7 +4,9 @@
   padding-bottom: 0;
 }
 .stone-container h2 { }
-
+.stone-container .error-message {
+  padding-bottom: 20px;
+}
 .stone-grid {
   display: -ms-flexbox;
   display: -webkit-flex;

@@ -13,7 +13,8 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      stones: []
+      stones: [],
+      error: null
     }
   }
 
@@ -45,6 +46,8 @@ class App extends Component {
         stones
       });
 
+    }).catch(() => {
+      this.setState({ error: 'Unable to load the stones gallery. Please try again later.'});
     });
 
   }
@@ -56,7 +59,7 @@ class App extends Component {
           <Header />
           <Form />
         </div>
-        <Stones stones={this.state.stones} />
+        <Stones stones={this.state.stones} error={this.state.error} />
         <Footer />
       </div>
     );

@@ -19,6 +19,11 @@ class Stones extends React.Component {
 
   // Render the stones or the spinner if the stones haven't been fetched yet
   renderStones(stones) {
+    if (this.props.error) {
+      return (
+        <div className="error-message">{this.props.error}</div>
+      );
+    }
     if (stones.length === 0) {
       return <Spinner message="...loading..." />
     } else {
