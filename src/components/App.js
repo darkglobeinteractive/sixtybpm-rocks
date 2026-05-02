@@ -27,7 +27,7 @@ class App extends Component {
         order: 'asc',
         per_page: 100,
         collection: 119,
-        _fields: 'acf.roaming_stone_location,acf.roaming_stone_name,title,id,gallery_image'
+        _fields: 'acf.roaming_stone_location,acf.roaming_stone_name,title,id,gallery_image,link'
       }
     }).then((res) => {
 
@@ -37,7 +37,8 @@ class App extends Component {
           id: stone.id,
           title: stone.acf.roaming_stone_name,
           location: stone.acf.roaming_stone_location,
-          image_url: stone.gallery_image
+          image_url: stone.gallery_image,
+          post_url: stone.link
         }
       });
 

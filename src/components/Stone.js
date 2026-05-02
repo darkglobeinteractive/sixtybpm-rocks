@@ -5,7 +5,7 @@ const Stone = ({ stone }) => {
     <div className="stone">
       <div className="wrap">
         <div className="image">
-          <img src={stone.image_url} alt={`Photograph of ${stone.title}`} />
+          <a href={stone.post_url} className="stone-link" target="_blank"><img src={stone.image_url} alt={`Photograph of ${stone.title}`} /></a>
         </div>
         <div className="info">
           <h3 className="title" dangerouslySetInnerHTML={{__html: stone.title}} />

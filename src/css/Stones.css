@@ -24,12 +24,33 @@
   padding: 0 10px;
 }
 .stone-grid .stone .wrap { }
-.stone-grid .stone .image { }
-.stone-grid .stone .image img {
-  display: block;
-  width: 100%;
+.stone-grid .stone .image { 
+  position: relative;
   margin: 0 0 10px;
+}
+.stone-grid .stone .image .stone-link {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  height: 0;
+  width: 100%;
+  padding: 0 0 56.25%;
   border-radius: 20px;
+}
+.stone-grid .stone .image .stone-link img {
+  display: block;
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  transition: transform 200ms ease-in-out;
+  transform: scale(1);
+}
+.stone-grid .stone .image .stone-link:hover img {
+  transform: scale(1.05);
 }
 .stone-grid .stone .info {
   padding: 0 10px;
