@@ -2,7 +2,7 @@ import React from 'react';
 
 import '../css/Spinner.css';
 
-const StonesLoading = ({ message }) => {
+const Spinner = ({ message }) => {
   return (
     <div className="loading">
       <div className="spinner"></div>
@@ -11,4 +11,4 @@ const StonesLoading = ({ message }) => {
   );
 }
 
-export default StonesLoading;
+export default Spinner;
