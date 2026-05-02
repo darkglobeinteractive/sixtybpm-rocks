@@ -8,13 +8,11 @@ class Stones extends React.Component {
 
   // Render the stones grid
   renderStonesGrid(stones) {
-    return stones.map((stone, index) => {
-      if (stone.location != 'TBD') {
-        return (
-          <Stone key={index} stone={stone} />
-        );
-      }
-    });
+    return stones
+    // Filter-out TBD items
+    .filter(stone => stone.location !== 'TBD')
+    // Return the legit stones
+    .map(stone => <Stone key={stone.id} stone={stone} />);
   }
 
   // Render the stones or the spinner if the stones haven't been fetched yet
